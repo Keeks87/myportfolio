@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Edit</title>
+</head>
+<body>
+    <h1>Blog Edit</h1>
+    <form action="{% url 'blog:blog_update' blog.pk %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="title" value="{{ blog.title }}">
+        <input type="text" name="content" value="{{ blog.content }}">
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

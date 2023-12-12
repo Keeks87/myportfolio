@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog - My Portfolio{% endblock %}
+
+{% block content %}
+    <h2>Blog</h2>
+    <div class="list-group">
+        {% for post in posts %}
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{ post.title }}</h5>
+                    <small>{{ post.pub_date }}</small>
+                </div>
+                <p class="mb-1">{{ post.content }}</p>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Detail</title>
+</head>
+<body>
+    <h1>Blog Detail</h1>
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.content }}</p>
+    <a href="{% url 'blog:blog_update' blog.pk %}">Update</a>
+    <a href="{% url 'blog:blog_delete' blog.pk %}">Delete</a>
+</body>
+</html>
